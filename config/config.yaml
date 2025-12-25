@@ -1,0 +1,40 @@
+# =========================
+# Database Configuration
+# =========================
+database:
+  host: ${DB_HOST}
+  port: ${DB_PORT}
+  name: ${DB_NAME}
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+
+# =========================
+# Data Generation Settings
+# =========================
+data_generation:
+  customers: 1000
+  products: 500
+  transactions: 10000
+  transaction_items_min: 15000
+  transaction_items_max: 25000
+  start_date: "2023-01-01"
+  end_date: "2023-12-31"
+  distribution: realistic
+
+# =========================
+# Pipeline Configuration
+# =========================
+pipeline:
+  batch_size: 1000
+  max_retries: 3
+  retry_delay_seconds: 5
+  timeout_seconds: 60
+  log_level: INFO
+
+# =========================
+# BI Tool Configuration
+# =========================
+bi_tool:
+  tool: tableau   # tableau OR powerbi
+  host: localhost
+  port: 5432
