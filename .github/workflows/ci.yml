@@ -62,11 +62,18 @@ jobs:
             sleep 3
           done
 
+      - name: Verify SQL files exist (debug)
+        run: |
+          ls -R .
+          ls -R ./sql || true
+          ls -R ./sql/ddl || true
+
       - name: Create database schemas
         run: |
-          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_staging_schema.sql
-          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_production_schema.sql
-          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_warehouse_schema.sql
+          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_staging_schema.sql
+          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_production_schema.sql
+          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_warehouse_schema.sql
+
 
       - name: Run pytest with coverage
         run: |
