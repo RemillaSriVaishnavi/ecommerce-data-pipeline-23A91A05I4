@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS production.customers (
 );
 
 -- ---------------------------------------------------------
--- 2. Production: Products
+-- 2. Production: Products (FIXED)
 -- ---------------------------------------------------------
 CREATE TABLE IF NOT EXISTS production.products (
     product_id        VARCHAR(20) PRIMARY KEY,
@@ -34,13 +34,20 @@ CREATE TABLE IF NOT EXISTS production.products (
     sub_category      VARCHAR(100),
     price             DECIMAL(10,2) NOT NULL CHECK (price >= 0),
     cost              DECIMAL(10,2) NOT NULL CHECK (cost >= 0),
+
+    -- ✅ REQUIRED BY ETL & WAREHOUSE
+    profit_margin     DECIMAL(5,2),
+    price_category    VARCHAR(50),
+
     brand             VARCHAR(100),
     stock_quantity    INTEGER NOT NULL CHECK (stock_quantity >= 0),
     supplier_id       VARCHAR(20),
     created_at        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
     CHECK (cost < price)
 );
+
 
 -- ---------------------------------------------------------
 -- 3. Production: Transactions
