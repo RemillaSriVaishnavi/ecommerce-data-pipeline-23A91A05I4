@@ -1,12 +1,13 @@
 # =========================
 # Database Configuration
 # =========================
+
 database:
-  host: ${DB_HOST}
-  port: ${DB_PORT}
-  name: ${DB_NAME}
-  user: ${DB_USER}
-  password: ${DB_PASSWORD}
+  host: localhost
+  port: 5432
+  name: ecommerce_db
+  user: postgres
+  password: postgres
 
 # =========================
 # Data Generation Settings
@@ -36,5 +37,11 @@ pipeline:
 # =========================
 bi_tool:
   tool: tableau   # tableau OR powerbi
-  host: localhost
+  host: postgres
   port: 5432
+
+
+scheduler:
+  daily_run_time: "14:45"   # 24-hour format (local system time)
+  timezone: "Asia/Kolkata"
+  retention_days: 7

@@ -1,0 +1,16 @@
+{
+  "bi_tool": "powerbi",
+  "dashboard_name": "E-Commerce Analytics Dashboard",
+  "pages": 4,
+  "visualizations": 18,
+  "data_source": "CSV exports from warehouse analytics queries",
+  "created_date": "2025-12-26",
+  "features": [
+    "KPIs",
+    "Time-series analysis",
+    "Customer segmentation",
+    "Geographic analysis",
+    "Product profitability",
+    "Interactive filters"
+  ]
+}

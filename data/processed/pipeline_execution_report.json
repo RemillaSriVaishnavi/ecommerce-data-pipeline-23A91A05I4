@@ -1,0 +1,29 @@
+{
+    "pipeline_execution_id": "PIPE_20251226_160449",
+    "start_time": "2025-12-26T16:04:49.709985+00:00",
+    "end_time": "2025-12-26T16:05:14.750861+00:00",
+    "total_duration_seconds": 25.04,
+    "status": "failed",
+    "steps_executed": {
+        "data_generation": {
+            "status": "success",
+            "duration_seconds": 3.36,
+            "retry_attempts": 0
+        },
+        "data_ingestion": {
+            "status": "success",
+            "duration_seconds": 4.61,
+            "retry_attempts": 0
+        },
+        "data_quality_checks": {
+            "status": "failed",
+            "duration_seconds": 17.07,
+            "retry_attempts": 3,
+            "error_message": "Traceback (most recent call last):\n  File \"D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality_checks\\data_quality_checks.py\", line 60, in <module>\n    main()\n  File \"D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality_checks\\data_quality_checks.py\", line 7, in main\n    conn = psycopg2.connect(\n           ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\psycopg2\\__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server at \"localhost\" (::1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\nconnection to server at \"localhost\" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?"
+        }
+    },
+    "errors": [
+        "data_quality_checks failed"
+    ],
+    "warnings": []
+}

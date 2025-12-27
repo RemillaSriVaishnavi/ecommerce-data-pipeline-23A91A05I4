@@ -1,0 +1,16 @@
+2025-12-26 14:44:29,049 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:44:29,056 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:44:34,742 | INFO | Completed step: data_generation in 5.69s
+2025-12-26 14:44:34,742 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:44:42,243 | INFO | Completed step: data_ingestion in 7.5s
+2025-12-26 14:44:42,243 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:44:42,730 | INFO | Completed step: data_quality_checks in 0.49s
+2025-12-26 14:44:42,730 | INFO | Starting step: staging_to_production (Attempt 1)
+2025-12-26 14:44:56,300 | INFO | Completed step: staging_to_production in 13.57s
+2025-12-26 14:44:56,305 | INFO | Starting step: warehouse_load (Attempt 1)
+2025-12-26 14:48:37,921 | INFO | Completed step: warehouse_load in 221.62s
+2025-12-26 14:48:37,921 | INFO | Starting step: analytics_generation (Attempt 1)
+2025-12-26 14:48:45,703 | INFO | Completed step: analytics_generation in 7.78s
+2025-12-26 14:48:45,710 | INFO | ========== PIPELINE FINISHED ==========
+2025-12-26 14:48:45,713 | INFO | Final Status: success
+2025-12-26 14:48:45,714 | INFO | Execution Report: data\processed\pipeline_execution_report.json

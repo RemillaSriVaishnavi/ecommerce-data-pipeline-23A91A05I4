@@ -41,7 +41,8 @@ if not CONFIG_PATH.exists():
 with open(CONFIG_PATH, "r") as f:
     config = yaml.safe_load(f)
 
-RUN_TIME = config["scheduler"].get("daily_run_time", "02:00")
+scheduler_cfg = config.get("scheduler", {})
+RUN_TIME = scheduler_cfg.get("daily_run_time", "02:00")
 TIMEZONE = config["scheduler"].get("timezone", "UTC")
 
 logging.info(f"Scheduler timezone: {TIMEZONE} (documented, system-based)")

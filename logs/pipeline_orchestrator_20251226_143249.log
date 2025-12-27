@@ -1,0 +1,100 @@
+2025-12-26 14:32:49,585 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:32:49,585 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:32:53,865 | INFO | Completed step: data_generation in 4.28s
+2025-12-26 14:32:53,865 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:32:58,075 | INFO | Completed step: data_ingestion in 4.21s
+2025-12-26 14:32:58,075 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:32:58,242 | INFO | Completed step: data_quality_checks in 0.17s
+2025-12-26 14:32:58,243 | INFO | Starting step: staging_to_production (Attempt 1)
+2025-12-26 14:33:08,669 | ERROR | Error in step staging_to_production
+2025-12-26 14:33:08,669 | ERROR | D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+2025-12-26 14:33:08,679 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+2025-12-26 14:33:08,679 | WARNING | Retrying step staging_to_production after 1s...
+2025-12-26 14:33:09,680 | INFO | Starting step: staging_to_production (Attempt 2)
+2025-12-26 14:33:20,769 | ERROR | Error in step staging_to_production
+2025-12-26 14:33:20,769 | ERROR | D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+2025-12-26 14:33:20,769 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+2025-12-26 14:33:20,769 | WARNING | Retrying step staging_to_production after 2s...
+2025-12-26 14:33:22,772 | INFO | Starting step: staging_to_production (Attempt 3)
+2025-12-26 14:33:34,419 | ERROR | Error in step staging_to_production
+2025-12-26 14:33:34,428 | ERROR | D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+2025-12-26 14:33:34,429 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+2025-12-26 14:33:34,429 | ERROR | Step failed permanently: staging_to_production
+2025-12-26 14:33:34,431 | INFO | ========== PIPELINE FINISHED ==========
+2025-12-26 14:33:34,431 | INFO | Final Status: failed
+2025-12-26 14:33:34,431 | INFO | Execution Report: data\processed\pipeline_execution_report.json

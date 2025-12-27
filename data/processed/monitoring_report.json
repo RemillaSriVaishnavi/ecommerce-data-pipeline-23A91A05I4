@@ -1,0 +1,46 @@
+{
+    "monitoring_timestamp": "2025-12-26T09:59:51.742817+00:00",
+    "pipeline_health": "critical",
+    "checks": {
+        "last_execution": {
+            "status": "ok",
+            "last_run": "2025-12-26T09:18:45.703542+00:00",
+            "hours_since_last_run": 0.69,
+            "threshold_hours": 25
+        },
+        "data_freshness": {
+            "status": "ok",
+            "staging_latest_record": null,
+            "production_latest_record": null,
+            "warehouse_latest_record": null,
+            "max_lag_hours": null
+        },
+        "data_volume_anomalies": {
+            "status": "ok",
+            "expected_range": null,
+            "actual_count": null,
+            "anomaly_detected": false,
+            "anomaly_type": null
+        },
+        "data_quality": {
+            "status": "ok",
+            "quality_score": 100,
+            "orphan_records": 0,
+            "null_violations": 0
+        },
+        "database_connectivity": {
+            "status": "error",
+            "response_time_ms": null,
+            "connections_active": null
+        }
+    },
+    "alerts": [
+        {
+            "severity": "critical",
+            "check": "database_connectivity",
+            "message": "Database connection failed: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  password authentication failed for user \"admin\"\n",
+            "timestamp": "2025-12-26T09:59:51.742817+00:00"
+        }
+    ],
+    "overall_health_score": 100
+}

@@ -1,0 +1,83 @@
+2025-12-26 14:25:05,179 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:25:05,179 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:25:10,962 | INFO | Completed step: data_generation in 5.78s
+2025-12-26 14:25:10,962 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:25:16,066 | INFO | Completed step: data_ingestion in 5.1s
+2025-12-26 14:25:16,067 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:25:20,319 | ERROR | Error in step data_quality_checks
+2025-12-26 14:25:20,320 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+2025-12-26 14:25:20,320 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:25:20,320 | WARNING | Retrying step data_quality_checks after 1s...
+2025-12-26 14:25:21,326 | INFO | Starting step: data_quality_checks (Attempt 2)
+2025-12-26 14:25:25,536 | ERROR | Error in step data_quality_checks
+2025-12-26 14:25:25,536 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+2025-12-26 14:25:25,543 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:25:25,543 | WARNING | Retrying step data_quality_checks after 2s...
+2025-12-26 14:25:27,546 | INFO | Starting step: data_quality_checks (Attempt 3)
+2025-12-26 14:25:31,794 | ERROR | Error in step data_quality_checks
+2025-12-26 14:25:31,794 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+2025-12-26 14:25:31,794 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:25:31,796 | ERROR | Step failed permanently: data_quality_checks
+2025-12-26 14:25:31,796 | INFO | ========== PIPELINE FINISHED ==========
+2025-12-26 14:25:31,799 | INFO | Final Status: failed
+2025-12-26 14:25:31,799 | INFO | Execution Report: data\processed\pipeline_execution_report.json

@@ -1,0 +1,44 @@
+2025-12-26 14:22:00,923 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:22:00,925 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:22:04,266 | INFO | Completed step: data_generation in 3.34s
+2025-12-26 14:22:04,266 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:22:08,975 | INFO | Completed step: data_ingestion in 4.71s
+2025-12-26 14:22:08,975 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:22:09,008 | ERROR | Error in step data_quality_checks
+2025-12-26 14:22:09,008 | ERROR | python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+2025-12-26 14:22:09,014 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+2025-12-26 14:22:09,014 | WARNING | Retrying step data_quality_checks after 1s...
+2025-12-26 14:22:10,015 | INFO | Starting step: data_quality_checks (Attempt 2)
+2025-12-26 14:22:10,061 | ERROR | Error in step data_quality_checks
+2025-12-26 14:22:10,061 | ERROR | python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+2025-12-26 14:22:10,063 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+2025-12-26 14:22:10,063 | WARNING | Retrying step data_quality_checks after 2s...
+2025-12-26 14:22:12,064 | INFO | Starting step: data_quality_checks (Attempt 3)
+2025-12-26 14:22:12,111 | ERROR | Error in step data_quality_checks
+2025-12-26 14:22:12,111 | ERROR | python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+2025-12-26 14:22:12,111 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+2025-12-26 14:22:12,113 | ERROR | Step failed permanently: data_quality_checks
+2025-12-26 14:22:12,113 | INFO | ========== PIPELINE FINISHED ==========
+2025-12-26 14:22:12,113 | INFO | Final Status: failed
+2025-12-26 14:22:12,113 | INFO | Execution Report: data\processed\pipeline_execution_report.json

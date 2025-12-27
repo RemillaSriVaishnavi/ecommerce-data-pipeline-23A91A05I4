@@ -5,7 +5,7 @@ def test_dimension_tables_exist(db_conn):
         WHERE table_schema = 'warehouse'
     """)
     tables = {r[0] for r in cursor.fetchall()}
-    expected = {"dim_customer", "dim_product", "fact_sales"}
+    expected = {"dim_customers", "dim_products", "fact_sales"}
     assert expected.issubset(tables)
 
 def test_fact_grain(db_conn):

@@ -1,0 +1,34 @@
+{
+  "transformation_timestamp": "2025-12-26T09:14:45.166509",
+  "records_processed": {
+    "production.customers": {
+      "inserted": 1000,
+      "status": "success"
+    },
+    "production.products": {
+      "inserted": 500,
+      "status": "success"
+    },
+    "production.transactions": {
+      "inserted": 10000,
+      "status": "success"
+    },
+    "production.transaction_items": {
+      "inserted": 29880,
+      "status": "success"
+    }
+  },
+  "transformations_applied": [
+    "text_normalization",
+    "email_standardization",
+    "phone_standardization",
+    "profit_margin_calculation",
+    "price_categorization",
+    "invalid_record_filtering",
+    "line_total_recalculation"
+  ],
+  "data_quality_post_transform": {
+    "null_violations": 0,
+    "constraint_violations": 0
+  }
+}

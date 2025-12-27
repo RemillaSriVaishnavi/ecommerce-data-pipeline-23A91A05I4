@@ -1,0 +1,6 @@
+{
+  "ingestion_timestamp": "2025-12-26T16:04:53.499473",
+  "tables_loaded": {},
+  "total_execution_time_seconds": 4.08,
+  "error": "connection to server at \"localhost\" (::1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\nconnection to server at \"localhost\" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\n"
+}

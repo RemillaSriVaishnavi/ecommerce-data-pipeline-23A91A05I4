@@ -1,0 +1,397 @@
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+python: can't open file 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality\\data_quality_checks.py': [Errno 2] No such file or directory
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality/data_quality_checks.py']' returned non-zero exit status 2.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step staging_to_production
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+Error in step staging_to_production
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+Error in step staging_to_production
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transformation_timestamp": datetime.utcnow().isoformat(),
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:149: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  customers = pd.read_sql("SELECT * FROM staging.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:150: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  products = pd.read_sql("SELECT * FROM staging.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:151: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  transactions = pd.read_sql("SELECT * FROM staging.transactions", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py:152: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  items = pd.read_sql("SELECT * FROM staging.transaction_items", conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 244, in <module>
+    run_staging_to_production_etl()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\staging_to_production.py", line 237, in run_staging_to_production_etl
+    print("Staging \u2192 Production ETL completed successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/staging_to_production.py']' returned non-zero exit status 1.
+
+Error in step warehouse_load
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:71: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT * FROM production.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:98: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT * FROM production.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:146: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py", line 250, in <module>
+    print("\u2705 Warehouse loaded successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/load_warehouse.py']' returned non-zero exit status 1.
+
+Error in step: data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 60, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 7, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 79, in run_step
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality_checks\\data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step: data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 60, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 7, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 79, in run_step
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality_checks\\data_quality_checks.py']' returned non-zero exit status 1.
+
+Error in step: data_quality_checks
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 60, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 7, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 79, in run_step
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'D:\\ecommerce-data-pipeline-23A91A05I4\\scripts\\quality_checks\\data_quality_checks.py']' returned non-zero exit status 1.
+

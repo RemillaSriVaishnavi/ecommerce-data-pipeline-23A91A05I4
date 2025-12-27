@@ -8,7 +8,6 @@ on:
 
 jobs:
   test:
-    name: Run Tests & Coverage
     runs-on: ubuntu-latest
 
     services:
@@ -35,50 +34,43 @@ jobs:
       PGPASSWORD: test_password
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-          cache: "pip"
+          cache: pip
 
-      - name: Install system dependencies (psql)
+      - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client
-
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Wait for PostgreSQL to be ready
+      - name: Create schemas
         run: |
-          for i in {1..10}; do
-            pg_isready -h localhost -p 5432 -U test_user && break
-            echo "Waiting for database..."
-            sleep 3
-          done
+          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_staging_schema.sql
+          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_production_schema.sql
+          psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_warehouse_schema.sql
 
-      - name: Verify SQL files exist (debug)
+      - name: Generate raw data
         run: |
-          ls -R .
-          ls -R ./sql || true
-          ls -R ./sql/ddl || true
+          python scripts/data_generation/generate_data.py
 
-      - name: Create database schemas
+      - name: Load staging
         run: |
-          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_staging_schema.sql
-          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_production_schema.sql
-          psql -h localhost -U test_user -d ecommerce_db_test -f ./sql/ddl/create_warehouse_schema.sql
+          python scripts/ingestion/ingest_to_staging.py
 
-
-      - name: Run pytest with coverage
+      - name: Run quality checks
         run: |
-          pytest tests/ \
-            --cov=scripts \
-            --cov-report=term \
-            --cov-report=html \
-            --cov-fail-under=70
+          python scripts/quality_checks/data_quality_checks.py
+
+      - name: Transform production
+        run: |
+          python scripts/transformation/staging_to_production.py
+
+      - name: Load warehouse
+        run: |
+          python scripts/transformation/load_warehouse.py
+
+      - name: Run tests
+        run: |
+          pytest tests/

@@ -1,0 +1,74 @@
+2025-12-26 14:29:27,860 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:29:27,861 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:29:31,896 | INFO | Completed step: data_generation in 4.03s
+2025-12-26 14:29:31,896 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:29:36,717 | INFO | Completed step: data_ingestion in 4.82s
+2025-12-26 14:29:36,717 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:29:37,109 | ERROR | Error in step data_quality_checks
+2025-12-26 14:29:37,114 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+2025-12-26 14:29:37,118 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:29:37,118 | WARNING | Retrying step data_quality_checks after 1s...
+2025-12-26 14:29:38,121 | INFO | Starting step: data_quality_checks (Attempt 2)
+2025-12-26 14:29:38,513 | ERROR | Error in step data_quality_checks
+2025-12-26 14:29:38,513 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+2025-12-26 14:29:38,517 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:29:38,517 | WARNING | Retrying step data_quality_checks after 2s...
+2025-12-26 14:29:40,519 | INFO | Starting step: data_quality_checks (Attempt 3)
+2025-12-26 14:29:40,755 | ERROR | Error in step data_quality_checks
+2025-12-26 14:29:40,755 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 58, in <module>
+    main()
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\quality_checks\data_quality_checks.py", line 6, in main
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+
+2025-12-26 14:29:40,756 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/quality_checks/data_quality_checks.py']' returned non-zero exit status 1.
+
+2025-12-26 14:29:40,756 | ERROR | Step failed permanently: data_quality_checks
+2025-12-26 14:29:40,760 | INFO | ========== PIPELINE FINISHED ==========
+2025-12-26 14:29:40,760 | INFO | Final Status: failed
+2025-12-26 14:29:40,760 | INFO | Execution Report: data\processed\pipeline_execution_report.json

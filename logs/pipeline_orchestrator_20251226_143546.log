@@ -1,0 +1,34 @@
+2025-12-26 14:35:46,034 | INFO | ========== PIPELINE STARTED ==========
+2025-12-26 14:35:46,038 | INFO | Starting step: data_generation (Attempt 1)
+2025-12-26 14:35:50,027 | INFO | Completed step: data_generation in 3.99s
+2025-12-26 14:35:50,027 | INFO | Starting step: data_ingestion (Attempt 1)
+2025-12-26 14:35:54,912 | INFO | Completed step: data_ingestion in 4.88s
+2025-12-26 14:35:54,915 | INFO | Starting step: data_quality_checks (Attempt 1)
+2025-12-26 14:35:55,099 | INFO | Completed step: data_quality_checks in 0.18s
+2025-12-26 14:35:55,099 | INFO | Starting step: staging_to_production (Attempt 1)
+2025-12-26 14:36:04,691 | INFO | Completed step: staging_to_production in 9.59s
+2025-12-26 14:36:04,691 | INFO | Starting step: warehouse_load (Attempt 1)
+2025-12-26 14:38:10,362 | ERROR | Error in step warehouse_load
+2025-12-26 14:38:10,365 | ERROR | D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:71: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT * FROM production.customers", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:98: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT * FROM production.products", conn)
+D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py:146: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\transformation\load_warehouse.py", line 250, in <module>
+    print("\u2705 Warehouse loaded successfully")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+2025-12-26 14:38:10,365 | ERROR | Traceback (most recent call last):
+  File "D:\ecommerce-data-pipeline-23A91A05I4\scripts\pipeline_orchestrator.py", line 67, in run_step
+    subprocess.run(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'scripts/transformation/load_warehouse.py']' returned non-zero exit status 1.
+
+2025-12-26 14:38:10,365 | WARNING | Retrying step warehouse_load after 1s...
+2025-12-26 14:38:11,369 | INFO | Starting step: warehouse_load (Attempt 2)

@@ -1,0 +1,54 @@
+{
+  "check_timestamp": "2025-12-25T05:28:07.319397",
+  "checks_performed": {
+    "null_checks": {
+      "status": "passed",
+      "tables_checked": [
+        "customers",
+        "transactions"
+      ],
+      "null_violations": 0,
+      "details": {
+        "customers.email": 0,
+        "transactions_without_items": 0
+      }
+    },
+    "duplicate_checks": {
+      "status": "passed",
+      "duplicates_found": 0,
+      "details": {
+        "duplicate_customer_ids": 0,
+        "duplicate_emails": 0
+      }
+    },
+    "range_checks": {
+      "status": "passed",
+      "violations": 0,
+      "details": {
+        "invalid_price": 0,
+        "invalid_discount": 0,
+        "invalid_quantity": 0
+      }
+    },
+    "data_consistency": {
+      "status": "passed",
+      "mismatches": 0,
+      "details": {
+        "line_total_mismatch": 0,
+        "transaction_total_mismatch": 0,
+        "cost_greater_than_price": 0
+      }
+    },
+    "referential_integrity": {
+      "status": "passed",
+      "orphan_records": 0,
+      "details": {
+        "orphan_transactions": 0,
+        "orphan_items_transaction": 0,
+        "orphan_items_product": 0
+      }
+    }
+  },
+  "overall_quality_score": 100.0,
+  "quality_grade": "A"
+}
