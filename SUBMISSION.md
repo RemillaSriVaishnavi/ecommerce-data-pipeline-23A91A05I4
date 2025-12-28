@@ -1,7 +1,7 @@
 # Final Submission
 
 ## Student Information
-- Name: R SRI VAISHNAVI
+- Name: Remilla Sri Vaishnavi
 - Roll Number: 23A91A05I4
 - Email: rsrivaishnavi2006@gmail.com
 - Submission Date: 28-12-2025
