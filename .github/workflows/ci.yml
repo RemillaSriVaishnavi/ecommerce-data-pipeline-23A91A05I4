@@ -55,11 +55,14 @@ jobs:
             sleep 3
           done
 
-      - name: Create schemas
+      - name: Create database schemas
         run: |
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_staging_schema.sql
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_production_schema.sql
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_warehouse_schema.sql
+        env:
+          PGPASSWORD: test_password
+
 
       # 🔥 THESE STEPS WERE MISSING BEFORE 🔥
       - name: Generate data
@@ -81,3 +84,9 @@ jobs:
             --cov=scripts \
             --cov-report=term \
             --cov-fail-under=70
+
+      - name: Debug DB row counts
+        run: |
+          psql -h localhost -U test_user -d ecommerce_db_test -c "SELECT COUNT(*) FROM staging.customers;"
+          psql -h localhost -U test_user -d ecommerce_db_test -c "SELECT COUNT(*) FROM production.customers;"
+          psql -h localhost -U test_user -d ecommerce_db_test -c "SELECT COUNT(*) FROM warehouse.fact_sales;"

@@ -9,7 +9,8 @@ CREATE SCHEMA IF NOT EXISTS warehouse;
 CREATE TABLE IF NOT EXISTS warehouse.dim_customers (
     customer_key SERIAL PRIMARY KEY,
     customer_id VARCHAR(20) NOT NULL,
-    full_name VARCHAR(200),
+    first_name VARCHAR(200),
+    last_name VARCHAR(100),
     email VARCHAR(255),
     city VARCHAR(100),
     state VARCHAR(100),
@@ -35,6 +36,7 @@ CREATE TABLE IF NOT EXISTS warehouse.dim_products (
     category VARCHAR(100),
     sub_category VARCHAR(100),
     brand VARCHAR(100),
+    price_category VARCHAR(50),
     price_range VARCHAR(50),
     effective_date DATE NOT NULL,
     end_date DATE,
