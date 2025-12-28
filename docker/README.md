@@ -293,9 +293,5 @@ The entire pipeline can be deployed and executed using a **single command**:
 docker compose up -d
 ```
 
----
-
-```
-
 
 
