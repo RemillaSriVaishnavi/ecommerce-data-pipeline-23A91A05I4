@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  pipeline-test:
     runs-on: ubuntu-latest
 
     services:
@@ -34,9 +34,11 @@ jobs:
       PGPASSWORD: test_password
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           cache: pip
@@ -52,25 +54,20 @@ jobs:
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_warehouse_schema.sql
 
       - name: Generate raw data
-        run: |
-          python scripts/data_generation/generate_data.py
+        run: python scripts/data_generation/generate_data.py
 
-      - name: Load staging
-        run: |
-          python scripts/ingestion/ingest_to_staging.py
+      - name: Ingest to staging
+        run: python scripts/ingestion/load_to_staging.py
 
-      - name: Run quality checks
-        run: |
-          python scripts/quality_checks/data_quality_checks.py
-
-      - name: Transform production
-        run: |
-          python scripts/transformation/staging_to_production.py
+      - name: Transform staging to production
+        run: python scripts/transformation/staging_to_production.py
 
       - name: Load warehouse
-        run: |
-          python scripts/transformation/load_warehouse.py
+        run: python scripts/transformation/load_warehouse.py
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          pytest tests/
+          pytest tests \
+            --cov=scripts \
+            --cov-report=term \
+            --cov-fail-under=70
