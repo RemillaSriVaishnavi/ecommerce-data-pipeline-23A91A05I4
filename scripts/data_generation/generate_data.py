@@ -9,13 +9,34 @@ from faker import Faker
 
 fake = Faker()
 
-
 # --------------------------------------------------
-# Utility: Load configuration
+# Utility: Load configuration (SAFE)
 # --------------------------------------------------
 def load_config():
-    with open("config/config.yaml", "r") as f:
-        return yaml.safe_load(f)
+    config_path = Path("config/config.yaml")
+
+    # Default values (CI SAFE)
+    default_config = {
+        "data_generation": {
+            "customers": 100,
+            "products": 50,
+            "transactions": 200
+        }
+    }
+
+    if not config_path.exists():
+        print("config.yaml not found. Using default data generation values.")
+        return default_config
+
+    with open(config_path, "r") as f:
+        user_config = yaml.safe_load(f) or {}
+
+    # Merge defaults
+    for key, value in default_config["data_generation"].items():
+        user_config.setdefault("data_generation", {})
+        user_config["data_generation"].setdefault(key, value)
+
+    return user_config
 
 
 # --------------------------------------------------
@@ -24,7 +45,6 @@ def load_config():
 def generate_customers(num_customers: int) -> pd.DataFrame:
     customers = []
     used_emails = set()
-
     age_groups = ["18-25", "26-35", "36-45", "46-60", "60+"]
 
     for i in range(1, num_customers + 1):
@@ -69,7 +89,7 @@ def generate_products(num_products: int) -> pd.DataFrame:
         sub_category = random.choice(categories[category])
 
         price = round(random.uniform(200, 5000), 2)
-        cost = round(price * random.uniform(0.5, 0.8), 2)  # cost < price
+        cost = round(price * random.uniform(0.5, 0.8), 2)
 
         products.append({
             "product_id": f"PROD{i:04d}",
@@ -97,21 +117,19 @@ def generate_transactions(num_transactions: int, customers_df: pd.DataFrame) -> 
 
     customer_ids = customers_df["customer_id"].tolist()
     transactions = []
-
     base_date = datetime.strptime("2023-01-01", "%Y-%m-%d")
 
     for i in range(1, num_transactions + 1):
         txn_date = base_date + timedelta(days=random.randint(0, 364))
-        txn_time = fake.time()
 
         transactions.append({
             "transaction_id": f"TXN{i:06d}",
             "customer_id": random.choice(customer_ids),
             "transaction_date": txn_date.date(),
-            "transaction_time": txn_time,
+            "transaction_time": fake.time(),
             "payment_method": random.choice(payment_methods),
             "shipping_address": fake.address().replace("\n", ", "),
-            "total_amount": 0.0  # calculated later
+            "total_amount": 0.0
         })
 
     return pd.DataFrame(transactions)
@@ -120,35 +138,23 @@ def generate_transactions(num_transactions: int, customers_df: pd.DataFrame) -> 
 # --------------------------------------------------
 # 4. Generate Transaction Items
 # --------------------------------------------------
-def generate_transaction_items(
-    transactions_df: pd.DataFrame,
-    products_df: pd.DataFrame
-) -> pd.DataFrame:
-
+def generate_transaction_items(transactions_df: pd.DataFrame, products_df: pd.DataFrame) -> pd.DataFrame:
     items = []
     item_id_counter = 1
-
     product_lookup = products_df.set_index("product_id")["price"].to_dict()
-
     transaction_totals = {}
 
     for _, txn in transactions_df.iterrows():
         num_items = random.randint(1, 5)
-        chosen_products = random.sample(
-            list(product_lookup.keys()), num_items
-        )
-
+        chosen_products = random.sample(list(product_lookup.keys()), num_items)
         txn_total = 0.0
 
         for prod_id in chosen_products:
             quantity = random.randint(1, 4)
-            unit_price = round(product_lookup[prod_id], 2)
+            unit_price = product_lookup[prod_id]
             discount = random.choice([0, 5, 10, 15])
 
-            line_total = round(
-                quantity * unit_price * (1 - discount / 100), 2
-            )
-
+            line_total = round(quantity * unit_price * (1 - discount / 100), 2)
             txn_total += line_total
 
             items.append({
@@ -165,47 +171,12 @@ def generate_transaction_items(
 
         transaction_totals[txn["transaction_id"]] = round(txn_total, 2)
 
-    # Update transaction totals
-    transactions_df["total_amount"] = transactions_df["transaction_id"].map(
-        transaction_totals
-    )
-
+    transactions_df["total_amount"] = transactions_df["transaction_id"].map(transaction_totals)
     return pd.DataFrame(items)
 
 
 # --------------------------------------------------
-# 5. Referential Integrity Validation
-# --------------------------------------------------
-def validate_referential_integrity(
-    customers: pd.DataFrame,
-    products: pd.DataFrame,
-    transactions: pd.DataFrame,
-    items: pd.DataFrame
-) -> dict:
-
-    orphan_customers = ~transactions["customer_id"].isin(customers["customer_id"])
-    orphan_products = ~items["product_id"].isin(products["product_id"])
-    orphan_transactions = ~items["transaction_id"].isin(transactions["transaction_id"])
-
-    violations = (
-        orphan_customers.sum()
-        + orphan_products.sum()
-        + orphan_transactions.sum()
-    )
-
-    score = 100 if violations == 0 else max(0, 100 - violations)
-
-    return {
-        "orphan_customer_ids": int(orphan_customers.sum()),
-        "orphan_product_ids": int(orphan_products.sum()),
-        "orphan_transaction_ids": int(orphan_transactions.sum()),
-        "constraint_violations": int(violations),
-        "data_quality_score": score
-    }
-
-
-# --------------------------------------------------
-# MAIN EXECUTION (Manual run only)
+# MAIN EXECUTION
 # --------------------------------------------------
 if __name__ == "__main__":
     config = load_config()
@@ -220,13 +191,11 @@ if __name__ == "__main__":
     )
     items_df = generate_transaction_items(transactions_df, products_df)
 
-    # Save CSVs
     customers_df.to_csv(raw_path / "customers.csv", index=False)
     products_df.to_csv(raw_path / "products.csv", index=False)
     transactions_df.to_csv(raw_path / "transactions.csv", index=False)
     items_df.to_csv(raw_path / "transaction_items.csv", index=False)
 
-    # Metadata
     metadata = {
         "generated_at": datetime.utcnow().isoformat(),
         "record_counts": {
@@ -234,17 +203,11 @@ if __name__ == "__main__":
             "products": len(products_df),
             "transactions": len(transactions_df),
             "transaction_items": len(items_df)
-        },
-        "date_range": {
-            "start": str(transactions_df["transaction_date"].min()),
-            "end": str(transactions_df["transaction_date"].max())
-        },
-        "quality": validate_referential_integrity(
-            customers_df, products_df, transactions_df, items_df
-        )
+        }
     }
 
     with open(raw_path / "generation_metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
 
-    print("Data generation completed successfully.")
+    print("Data generation completed successfully")
+    print("Records:", metadata["record_counts"])
