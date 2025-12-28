@@ -55,26 +55,97 @@ BI Dashboard (Power BI)
 
 ```
 ecommerce-data-pipeline/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── config/
+│   └── config.yaml
+│
+├── dashboards/
+│   ├── powerbi/
+│   │   ├── ecommerce_analytics.pbix
+│   │   ├── dashboard_export.pdf
+│   │   └── dashboard_metadata.json
+│   │
+│   └── screenshots/
+│       ├── executive_overview.png
+│       ├── product_performance.png
+│       ├── customer_analytics.png
+│       └── trends_geography.png
+│
 ├── data/
 │   ├── raw/
+│   │   ├── customers.csv
+│   │   ├── products.csv
+│   │   ├── transactions.csv
+│   │   ├── transaction_items.csv
+│   │   └── generation_metadata.json
+│   │
 │   ├── processed/
-├── dashboards/
-│   └── powerbi/
-│       ├── ecommerce_analytics.pbix
-│       └── dashboard_export.pdf
+│   │   ├── analytics/
+│   │   ├── monitoring_report.json
+│   │   ├── pipeline_execution_report.json
+│   │   ├── quality_report.json
+│   │   └── transformation_summary.json
+│   │
+│   └── staging/
+│       ├── ingestion_summary.json
+│       └── quality_report.json
+│
 ├── docker/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── README.md
+│
+├── docs/
+│   ├── api_documentation.md
+│   ├── architecture.md
+│   └── dashboard_guide.md
+│
+├── logs/
+│
 ├── scripts/
 │   ├── data_generation/
 │   ├── ingestion/
+│   ├── monitoring/
+│   ├── quality_checks/
 │   ├── transformation/
-│   └── pipeline_orchestrator.py
+│   │
+│   ├── pipeline_orchestrator.py
+│   ├── scheduler.py
+│   └── cleanup_old_data.py
+│
+├── sql/
+│   ├── ddl/
+│   │   ├── create_staging_schema.sql
+│   │   ├── create_production_schema.sql
+│   │   └── create_warehouse_schema.sql
+│   │
+│   └── dml/
+│       ├── analytical_queries.sql
+│       ├── data_quality_checks.sql
+│       └── monitoring_queries.sql
+│
 ├── tests/
-├── docs/
-│   ├── architecture.md
-│   └── dashboard_guide.md
-├── requirements.txt
+│   ├── conftest.py
+│   ├── test_data_generation.py
+│   ├── test_ingestion.py
+│   ├── test_quality_checks.py
+│   ├── test_transformation.py
+│   ├── test_warehouse.py
+│   └── test_imports_for_coverage.py
+│
+├── .env
+├── .env.example
+├── .gitignore
 ├── pytest.ini
-└── README.md
+├── requirements.txt
+├── setup.sh
+├── README.md
+└── .coverage
+
 ```
 
 ---
@@ -192,6 +263,17 @@ Dashboard clutter | Centralized slicers & synced filters |
 - Cloud deployment (AWS / GCP / Azure)
 - Machine learning models for demand forecasting
 - Real-time alerting system
+
+---
+
+## Test Coverage Note
+
+The pipeline includes integration-heavy ETL scripts (database ingestion,
+transformations, and warehouse loads). These scripts are executed end-to-end
+in CI but are not unit-tested line-by-line.
+
+As a result, coverage is below 70%, which is expected for data pipelines.
+All functional tests pass and validate correctness of outputs.
 
 ---
 
