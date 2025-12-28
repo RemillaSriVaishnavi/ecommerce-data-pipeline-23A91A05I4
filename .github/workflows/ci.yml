@@ -57,7 +57,7 @@ jobs:
         run: python scripts/data_generation/generate_data.py
 
       - name: Ingest to staging
-        run: python scripts/ingestion/load_to_staging.py
+        run: python scripts/ingestion/ingest_to_staging.py
 
       - name: Transform staging to production
         run: python scripts/transformation/staging_to_production.py
