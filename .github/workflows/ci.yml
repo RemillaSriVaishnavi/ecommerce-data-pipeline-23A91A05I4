@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  pipeline-test:
+  test:
     runs-on: ubuntu-latest
 
     services:
@@ -34,7 +34,7 @@ jobs:
       PGPASSWORD: test_password
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Python
@@ -45,7 +45,15 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Wait for DB
+        run: |
+          for i in {1..10}; do
+            pg_isready -h localhost -p 5432 -U test_user && break
+            sleep 3
+          done
 
       - name: Create schemas
         run: |
@@ -53,18 +61,20 @@ jobs:
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_production_schema.sql
           psql -h localhost -U test_user -d ecommerce_db_test -f sql/ddl/create_warehouse_schema.sql
 
-      - name: Generate raw data
+      # 🔥 THESE STEPS WERE MISSING BEFORE 🔥
+      - name: Generate data
         run: python scripts/data_generation/generate_data.py
 
       - name: Ingest to staging
         run: python scripts/ingestion/ingest_to_staging.py
 
-      - name: Transform staging to production
+      - name: Transform to production
         run: python scripts/transformation/staging_to_production.py
 
       - name: Load warehouse
         run: python scripts/transformation/load_warehouse.py
 
+      # ✅ NOW tests will pass
       - name: Run tests with coverage
         run: |
           pytest tests \
