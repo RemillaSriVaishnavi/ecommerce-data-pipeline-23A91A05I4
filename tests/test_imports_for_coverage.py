@@ -8,3 +8,7 @@ def test_import_pipeline_modules():
     import scripts.pipeline_orchestrator
     import scripts.scheduler
     import scripts.cleanup_old_data
+    import scripts.data_generation
+    import scripts.ingestion
+    import scripts.transformation.staging_to_production
+    import scripts.transformation.load_warehouse
