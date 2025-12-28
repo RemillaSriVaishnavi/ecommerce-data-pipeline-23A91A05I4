@@ -1,4 +1,3 @@
 [run]
 omit =
-    scripts/scheduler.py
-    scripts/cleanup_old_data.py
+    scripts/pipeline_orchestrator.py

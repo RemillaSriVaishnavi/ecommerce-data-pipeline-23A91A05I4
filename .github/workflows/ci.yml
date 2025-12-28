@@ -79,8 +79,7 @@ jobs:
 
       # ✅ NOW tests will pass
       - name: Run tests with coverage
-        run: |
-          pytest tests
+        run: pytest
 
       - name: Debug DB row counts
         run: |
